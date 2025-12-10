@@ -1,5 +1,3 @@
-# Deep-Learning-UEC642--Project
-
 <h1>Handwritten Digit Recognition via Separable-CNN Ensembles</h1>
 
 <hr/>
@@ -94,26 +92,25 @@ To systematically improve accuracy beyond a single CNN, an <b>ensemble of multip
 The ensemble consistently achieves higher test accuracy than any individual base model, confirming that model diversity plus averaging reduces variance and improves generalization on MNIST. Similar ensemble strategies have been reported to yield measurable gains even when each constituent CNN is already strong. [web:95][web:38][web:104]
 </p>
 
-<h2>Key Findings</h2>
-<ul>
-  <li>Depthwise separable convolutions allow construction of a compact CNN that maintains high performance on handwritten digit recognition. [web:81][web:86]</li>
-  <li>Label smoothing helps reduce overconfidence and slightly improves validation stability compared to standard one‑hot training. [web:83][web:88]</li>
-  <li>Ensembling several lightweight CNNs provides a reliable, architecture‑agnostic way to gain additional accuracy on MNIST without changing the dataset or applying heavy feature engineering. [web:95][web:98][web:107]</li>
-</ul>
+## Key Findings
+
+- Depthwise separable convolutions allow construction of a compact CNN that maintains high performance on handwritten digit recognition.
+
+- Label smoothing helps reduce overconfidence and slightly improves validation stability compared to standard one‑hot training.
+
+- Ensembling several lightweight CNNs provides a reliable, architecture‑agnostic way to gain additional accuracy on MNIST without changing the dataset or applying heavy feature engineering.
+
 
 <h2>Conclusion</h2>
 <p>
 The project demonstrates that efficient handwritten digit recognition can be achieved by combining modern CNN design (separable convolutions) with simple but powerful training‑time techniques (label smoothing and model ensembles). On the MNIST benchmark, this setup attains state‑of‑the‑art‑level accuracy for such a small model class while keeping training time short on a standard Colab GPU. Future extensions could explore knowledge distillation to compress the ensemble into a single student network, or adaptation of the same architecture to more challenging handwriting datasets such as EMNIST or real‑world digit corpora. [web:20][web:65][web:95]
 </p>
 
-<h2>References</h2>
-<ol>
-  <li>MNIST handwritten digit database. [web:4][web:20]</li>
-  <li>TensorFlow/Keras MNIST convolutional example. [web:65]</li>
-  <li>Guides on choosing CNN architectures and tuning for MNIST. [web:38][web:52]</li>
-  <li>Work on improving CNN performance for MNIST and similar benchmarks. [web:96][web:104]</li>
-  <li>Resources on depthwise separable convolutions and efficient CNN design. [web:81][web:86][web:94]</li>
-  <li>Label smoothing techniques and their effect on generalization. [web:83][web:88]</li>
-  <li>Ensemble methods and CNN ensembles applied to image classification. [web:95][web:98][web:101][web:107]</li>
-  <li>Learning‑rate scheduling and practical guidance for neural network training. [web:109][web:112]</li>
-</ol>
+## References
+
+1. Y. LeCun, C. Cortes, and C.J.C. Burges, “The MNIST Database of Handwritten Digits,” http://yann.lecun.com/exdb/mnist/  
+2. TensorFlow, “Simple MNIST ConvNet (Keras Example),” https://keras.io/examples/vision/mnist_convnet/  
+3. C. Deotte, “How to Choose CNN Architecture MNIST,” Kaggle Notebook, https://www.kaggle.com/code/cdeotte/how-to-choose-cnn-architecture-mnist  
+4. “Using Depthwise Separable Convolutions in TensorFlow,” Machine Learning Mastery, https://machinelearningmastery.com/using-depthwise-separable-convolutions-in-tensorflow/  
+5. “Label Smoothing: The Overlooked and Lesser-Talked Regularization Technique,” Daily Dose of Data Science, https://blog.dailydoseofds.com/p/label-smoothing-the-overlooked-and  
+
